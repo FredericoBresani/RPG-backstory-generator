@@ -29,4 +29,5 @@ async def generate_rpg_background(character):
     body_message = json.dumps(body_message)
 
     req = requests.post(api_url, headers=headers, data=body_message)
+
     return req.json()['choices'][0]['message']
